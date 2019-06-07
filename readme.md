@@ -9,7 +9,7 @@ docker, docker-compose, npm ready
 
 ### backend
 
-1. `git clone git@github.com:samwalker505/finddoc-backend.git`
+1. `git clone git@github.com:samwalker505/coding-challenge-backend.git`
 
 2. `cd finddoc-backend`
 
@@ -25,7 +25,7 @@ you can run the test case to make sure it is ok
 
 ### frontend
 
-1. `git clone git@github.com:samwalker505/finddoc-frontend.git`
+1. `git clone git@github.com:samwalker505/coding-challenge-frontend.git`
 
 2. `cd finddoc-frontend`
 

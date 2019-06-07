@@ -20,8 +20,10 @@
   },
   "dependencies": {
     "@types/redis": "^2.8.13",
+    "@types/redlock": "^3.0.3",
     "axios": "^0.19.0",
     "express": "^4.17.1",
-    "redis": "^2.8.0"
+    "redis": "^2.8.0",
+    "redlock": "^3.1.2"
   }
 }

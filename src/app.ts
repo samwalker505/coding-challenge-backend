@@ -39,21 +39,22 @@ async function getCurrencyInfo(currencyPair: string): Promise<CurrencyInfo> {
 }
 
 const app = express();
-
 const api = express.Router();
 
 api.get("/tickers", async function(req, res, next) {
   let results: CurrencyInfo[];
-  results = JSON.parse(await getAsync("tickers"));
+  try {
+    results = JSON.parse(await getAsync("tickers"));
+  } catch (err) {
+    console.error(err);
+  }
+
   if (!results) {
     try {
       console.log("from external api");
       const promises = keyPairs.map(k => getCurrencyInfo(k));
       results = await Promise.all(promises);
-      const expireTime = Math.min(
-        30,
-        new Date().getTime() / 1000 - results[0].timestamp
-      );
+      const expireTime = 10;
       console.log(`set expire time ${expireTime}`);
       await setAsync(
         "tickers",
@@ -83,6 +84,6 @@ app.use(function(err, req, res, next) {
   res.status(500).send("Something broke!");
 });
 
-app.listen(3000, function() {
-  console.log("Finddoc Backend listening on port 3000!");
+app.listen(8080, function() {
+  console.log("Finddoc Backend listening on port 8080!");
 });

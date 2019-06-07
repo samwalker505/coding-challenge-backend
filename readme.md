@@ -11,7 +11,7 @@ docker, docker-compose, npm ready
 
 1. `git clone git@github.com:samwalker505/coding-challenge-backend.git`
 
-2. `cd finddoc-backend`
+2. `cd coding-challenge-backend`
 
 3. `docker-compose up`
 
@@ -27,7 +27,7 @@ you can run the test case to make sure it is ok
 
 1. `git clone git@github.com:samwalker505/coding-challenge-frontend.git`
 
-2. `cd finddoc-frontend`
+2. `cd coding-challenge-frontend`
 
 3. `yarn`
 

@@ -16,5 +16,7 @@ test("health check", done => {
 test("ticker infos", done => {
   instance.get("/api/tickers").then(resp => {
     expect(resp.data).toHaveProperty("results");
+    expect(resp.data.results).not.toBeNull();
+    done();
   });
 });
